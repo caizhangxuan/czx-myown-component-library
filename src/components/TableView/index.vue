@@ -82,7 +82,6 @@
 <script>
     import {formatterTime} from '../../utils'
     import {getList} from './util'
-    // import DataTemp from './table'
 
     export default {
         name: "TableView",
