@@ -1,7 +1,7 @@
 {
-  "name": "vue-icon",
-  "version": "0.1.0",
-  "private": true,
+  "name": "czx-component-library",
+  "version": "0.1.1",
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -9,6 +9,10 @@
   },
   "dependencies": {
     "core-js": "^3.4.3",
+    "echarts": "^4.5.0",
+    "element-ui": "^2.13.0",
+    "lodash": "^4.17.15",
+    "mockjs": "^1.1.0",
     "vue": "^2.6.10"
   },
   "devDependencies": {
@@ -29,7 +33,9 @@
       "plugin:vue/essential",
       "eslint:recommended"
     ],
-    "rules": {},
+    "rules": {
+      "no-console": "off"
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }

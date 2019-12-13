@@ -1,31 +1,32 @@
 <template>
     <section id="app">
-        <MyIcon name="#iconAlipay" style="border:1px solid #000;"></MyIcon>
     </section>
 </template>
 
 <script>
-import MyIcon from './components/MyIcon.vue'
-import "../static/myIcon"
+    import "../static/myIcon"
 
-export default {
-  name: 'app',
-  components: {
-      MyIcon
-  }
-}
+    export default {
+        name: 'app',
+        components: {},
+        data() {
+            return {}
+        }
+    }
 </script>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-}
-.icon {
-    width: 1em; height: 1em;
-    vertical-align: -0.15em;
-    fill: currentColor;
-    overflow: hidden;
-    font-size:16px;
-}
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+        font-size: 16px;
+    }
 </style>
