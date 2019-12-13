@@ -1,0 +1,59 @@
+{
+  "list": [],
+
+
+  "header": [
+    {
+      "name": "编号",
+      "value": "id"
+    },
+    {
+      "name": "姓名",
+      "value": "name"
+    },
+    {
+      "name": "账号",
+      "value": "email"
+    },
+    {
+      "name": "角色",
+      "value": "role"
+    },
+    {
+      "name": "创建时间",
+      "value": "created"
+    },
+    {
+      "name": "更新时间",
+      "value": "update"
+    }
+  ],
+
+  "operation": {
+    "operation": "操作",
+    "check": {
+      "isShow": true,
+      "title": "查看"
+    },
+    "edit": {
+      "isShow": true,
+      "title": "编辑"
+    },
+    "del": {
+      "isShow": true,
+      "title": "删除"
+    },
+    "log": {
+      "isShow": true,
+      "title": "日志"
+    },
+    "statistical": {
+      "isShow": true,
+      "title": "统计"
+    },
+    "order": {
+      "isShow": true,
+      "title": "订单"
+    }
+  }
+}
