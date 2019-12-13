@@ -109,7 +109,18 @@
                         this.$emit('editOperation', index);
                         break;
                     case 'del':
-                        this.$emit('delOperation', index);
+                        this.$confirm('确认要删除, 是否继续?', '提示', {
+                            confirmButtonText: '确定',
+                            cancelButtonText: '取消',
+                            type: 'warning'
+                        }).then(() => {
+                            if(this.isTest){
+                                this.TestData.splice(index,1);
+                            }
+                            this.$emit('delOperation', index);
+                        }).catch(() => {
+
+                        });
                         break;
                 }
             }
