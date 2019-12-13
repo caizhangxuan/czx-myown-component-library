@@ -1,16 +1,26 @@
 <template>
     <section id="app">
+        <TableView is-test="true"></TableView>
     </section>
 </template>
 
 <script>
     import "../static/myIcon"
+    import TableView from "./components/TableView/index";
 
     export default {
         name: 'app',
-        components: {},
+        components: {TableView},
         data() {
-            return {}
+            return {
+                oper:{
+                    operation: "操作",
+                    check: {
+                        isShow: true,
+                        title: "查看"
+                    }
+                }
+            }
         }
     }
 </script>

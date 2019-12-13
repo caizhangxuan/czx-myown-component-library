@@ -12,7 +12,7 @@
             isImg             是否是图片          type Boolean
             isTime            是否时间戳          type Boolean
             -->
-            <template v-for="(item,index) in tableHeader">
+            <template v-for="(item,index) in TestHead">
                 <!--图片-->
                 <el-table-column :prop="item.value" :label="item.name" align="center" v-if="item.isImg" :key="index">
                     <template slot-scope="scope">
@@ -46,32 +46,32 @@
             statistical         是否有统计按钮         type Object,{isShow: Boolean(是否展示按钮),title: String (按钮的名称)}
             order               是否有订单按钮         type Object,{isShow: Boolean(是否展示按钮),title: String (按钮的名称)}
             -->
-            <el-table-column :label="tableOperation ? tableOperation.operation : ''" align="center" v-if="tableOperation">
+            <el-table-column :label="TestOperate ? TestOperate.operation : ''" align="center" v-if="TestOperate">
                 <template slot-scope="scope">
                     <!--查看，属性check-->
-                    <el-button type="text" size="small" v-if="tableOperation.check && tableOperation.check.isShow"
-                               @click="handleChoose(scope.$index,scope.row,'check')">{{tableOperation.check.title}}
+                    <el-button type="text" size="small" v-if="TestOperate.check && TestOperate.check.isShow"
+                               @click="handleChoose(scope.$index,scope.row,'check')">{{TestOperate.check.title}}
                     </el-button>
                     <!--编辑，属性edit-->
-                    <el-button type="text" size="small" v-if="tableOperation.edit && tableOperation.edit.isShow"
-                               @click="handleChoose(scope.$index,scope.row,'edit')">{{tableOperation.edit.title}}
+                    <el-button type="text" size="small" v-if="TestOperate.edit && TestOperate.edit.isShow"
+                               @click="handleChoose(scope.$index,scope.row,'edit')">{{TestOperate.edit.title}}
                     </el-button>
                     <!--删除，属性del-->
-                    <el-button type="text" size="small" v-if="tableOperation.del && tableOperation.del.isShow"
-                               @click="handleChoose(scope.$index,scope.row,'del')">{{tableOperation.del.title}}
+                    <el-button type="text" size="small" v-if="TestOperate.del && TestOperate.del.isShow"
+                               @click="handleChoose(scope.$index,scope.row,'del')">{{TestOperate.del.title}}
                     </el-button>
                     <!--日志，属性log-->
-                    <el-button type="text" size="small" v-if="tableOperation.log && tableOperation.log.isShow">
-                        {{tableOperation.log.title}}
+                    <el-button type="text" size="small" v-if="TestOperate.log && TestOperate.log.isShow">
+                        {{TestOperate.log.title}}
                     </el-button>
                     <!--统计，属性statistical-->
                     <el-button type="text" size="small"
-                               v-if="tableOperation.statistical && tableOperation.statistical.isShow">
-                        {{tableOperation.statistical.title}}
+                               v-if="TestOperate.statistical && TestOperate.statistical.isShow">
+                        {{TestOperate.statistical.title}}
                     </el-button>
                     <!--订单，属性order-->
-                    <el-button type="text" size="small" v-if="tableOperation.order && tableOperation.order.isShow">
-                        {{tableOperation.order.title}}
+                    <el-button type="text" size="small" v-if="TestOperate.order && TestOperate.order.isShow">
+                        {{TestOperate.order.title}}
                     </el-button>
                 </template>
             </el-table-column>
@@ -82,6 +82,7 @@
 <script>
     import {formatterTime} from '../../utils'
     import {getList} from './util'
+    import Data from './table.json'
 
     export default {
         name: "TableView",
@@ -117,6 +118,7 @@
             console.log(getList());
         },
         computed:{
+            // 如果是测试模式，那么列表的data主题就用假数据
             TestData:function () {
                 let para;
                 if(this.isTest){
@@ -125,6 +127,26 @@
                 }else{
                     para = this.dataList;
                     return para
+                }
+            },
+            // 将表头部分用假数据
+            TestHead:function () {
+                if(this.isTest){
+                    return Data.header
+                }else{
+                    return this.tableHeader
+                }
+            },
+            // 操作按钮用假数据
+            TestOperate:function () {
+                if(this.tableOperation){
+                    return this.tableOperation
+                }else{
+                    if(this.isTest){
+                        return Data.operation
+                    }else{
+                        return false
+                    }
                 }
             }
         }
