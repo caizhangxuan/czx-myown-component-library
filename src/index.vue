@@ -1,16 +1,14 @@
 <template>
     <section id="app">
-        <TableView is-test="true"></TableView>
     </section>
 </template>
 
 <script>
     import "../static/myIcon"
-    import TableView from "./components/TableView/index";
 
     export default {
         name: 'app',
-        components: {TableView},
+        components: {},
         data() {
             return {
                 oper:{
