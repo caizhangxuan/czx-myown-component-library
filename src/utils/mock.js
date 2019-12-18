@@ -21,6 +21,6 @@ const getAddress = () => {
 }
 
 
-export {getList}
+export {getList,getAddress}
 
 
