@@ -203,8 +203,8 @@ export const formatterTime = (time,type) =>{
   hour = hour < 10 ? '0'+hour :hour;
   let m = date.getMinutes();        // 分
   m = m < 10 ? '0'+m :m;
-  let s = date.getSeconds();        // 秒
-  s = s < 10 ? '0'+s :s;
+  // let s = date.getSeconds();        // 秒
+  // s = s < 10 ? '0'+s :s;
 
   let callback;
 
@@ -219,4 +219,4 @@ export const formatterTime = (time,type) =>{
   return callback
 };
 
-// 获取随机数
+// 获取随机地点

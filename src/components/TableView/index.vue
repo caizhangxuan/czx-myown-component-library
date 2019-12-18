@@ -81,7 +81,7 @@
 
 <script>
     import {formatterTime} from '../../utils'
-    import {getList} from './util'
+    import {getList} from '../../utils/mock'
     import Data from './table.json'
 
     export default {

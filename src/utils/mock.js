@@ -1,7 +1,7 @@
 let Mock = require('mockjs');
 
 
-export const getList = () => {
+const getList = () => {
     return Mock.mock({
         "data|1-10": [
             {
@@ -15,3 +15,12 @@ export const getList = () => {
         ]
     });
 };
+
+const getAddress = () => {
+    return Mock.mock('@city(true)')
+}
+
+
+export {getList}
+
+
