@@ -4,6 +4,7 @@
 </template>
 
 <script>
+    import "../static/myIcon"
 
     export default {
         name: 'app',

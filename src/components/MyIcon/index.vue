@@ -5,7 +5,6 @@
 </template>
 
 <script>
-    import "../../../static/myIcon"
     export default {
         name: "MyIcon",
         props: ['name', 'size', 'color'],
