@@ -5,9 +5,10 @@
 </template>
 
 <script>
+    import "../static/myIcon"
     export default {
         name: "MyIcon",
-        props: ['name','size','color'],
+        props: ['name', 'size', 'color'],
         data() {
             return {}
         },
@@ -15,9 +16,9 @@
             // iconName:function () {
             //     return '#' + this.name
             // },
-            iconSize:function () {
-                let iSize = this.size ? 'font-size:'+ this.size+'px;' : '';
-                let iColor = this.color ? 'color:'+ this.color+';' : '';
+            iconSize: function () {
+                let iSize = this.size ? 'font-size:' + this.size + 'px;' : '';
+                let iColor = this.color ? 'color:' + this.color + ';' : '';
                 return iSize + iColor
             }
         },
