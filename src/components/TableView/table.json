@@ -31,29 +31,25 @@
 
   "operation": {
     "operation": "操作",
-    "check": {
-      "isShow": true,
-      "title": "查看"
-    },
-    "edit": {
-      "isShow": true,
-      "title": "编辑"
-    },
-    "del": {
-      "isShow": true,
-      "title": "删除"
-    },
-    "log": {
-      "isShow": true,
-      "title": "日志"
-    },
-    "statistical": {
-      "isShow": true,
-      "title": "统计"
-    },
-    "order": {
-      "isShow": true,
-      "title": "订单"
-    }
+    "list": [
+      {
+        "title": "查看",
+        "typeId": "check",
+        "type": "primary",
+        "isPlain": false
+      },
+      {
+        "title": "修改",
+        "typeId": "edit",
+        "type": "primary",
+        "isPlain": true
+      },
+      {
+        "title": "删除",
+        "typeId": "edit",
+        "type": "info",
+        "isPlain": true
+      }
+    ]
   }
 }
