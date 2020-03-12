@@ -64,6 +64,7 @@
       handleSuccess(response,file,fileList){
         console.log(fileList);
         console.log(response);
+        file.httpUrl = response.data.path;
         this.$emit('handleImgList',fileList);
         this.$emit('uploadSuccess',response)
         // this.upSuccessUrl = response.data.path;

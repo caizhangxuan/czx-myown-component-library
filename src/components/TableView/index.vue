@@ -16,22 +16,17 @@
         <!--图片-->
         <el-table-column :prop="item.value" :label="item.name" align="center" v-if="item.isImg" :key="index">
           <template slot-scope="scope">
-            <img
-              :src="`${baseUrl}${scope.row.img}`"
-              alt
-              width="100%"
-              class="image"
-            >
+            <img :src="`${baseUrl}${scope.row.img}`" alt width="100%" class="image">
           </template>
         </el-table-column>
         <!--时间戳-->
-        <el-table-column :prop="item.value" :label="item.name" align="center" :formatter="timeFormatter" v-else-if="item.isTime" sortable>
+        <el-table-column :prop="item.value" :label="item.name" align="center" :formatter="timeFormatter" v-else-if="item.isTime" sortable :key="index">
         </el-table-column>
         <!--角色-->
-        <el-table-column :prop="item.value" :label="item.name" align="center" :formatter="roleDifference" v-else-if="item.isRole">
+        <el-table-column :prop="item.value" :label="item.name" align="center" :formatter="roleDifference" v-else-if="item.isRole" :key="index">
         </el-table-column>
 
-        <el-table-column :prop="item.value" :label="item.name" align="center" v-else>
+        <el-table-column :prop="item.value" :label="item.name" align="center" v-else :key="index">
         </el-table-column>
       </template>
 
@@ -58,7 +53,7 @@
 </template>
 
 <script>
-  import {formatterTime} from '../js'
+  import {formatterTime} from '../../utils/index'
   export default {
     name: "TableView",
     props:{
