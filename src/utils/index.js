@@ -14,14 +14,103 @@ require('echarts/lib/component/title');
 export const spaceKeyValid = (str) =>{
     let value;
     if(str){
-        value = str.replace(/^\s*|\s*$/g,"");
-        if(value === '' || value === undefined || !value ){
-            return false
-        }else{
+        value = str.replace(/^\s*/g,"");
+        if(!!value){
             return value
+        }else{
+            return ''
         }
     }
 };
+// 验证是否是数字
+export const NUmValid = (str) =>{
+    let temp = /^[0-9]*$/g;
+    let value = temp.test(str);
+    if(!!value){
+        return str
+    }else{
+        return ''
+    }
+};
+// 验证是否是浮点型数字，^([1-9][0-9]*)+(.[0-9]{1,2})?$
+export const FloatValid = (str) =>{
+    let temp = /^([1-9][0-9]*)+(.[0-9]{1,2})?$/g;
+    let value = temp.test(str);
+    if(!!value){
+        return str
+    }else{
+        return ''
+    }
+};
+// 验证是否是大于0的数字^(0|[1-9][0-9]*)$
+export const IntegerValid = (str) =>{
+    let temp = /^([1-9][0-9]*)$/g;
+    let value = temp.test(str);
+    if(!!value){
+        return str
+    }else{
+        return ''
+    }
+};
+
+
+// 正则表达，验证是否是英文和数字组成
+export const EngNumValid = (str) =>{
+    let temp = /^[A-Za-z0-9]+$/g;
+    let value = temp.test(str);
+    if(!!value){
+        return str
+    }else{
+        return ''
+    }
+};
+
+// 验证是否是中英文^[\u4E00-\u9FA5A-Za-z0-9_]+$
+export const ChinEngValid = (str) =>{
+    let temp = /^[\u4E00-\u9FA5A-Za-z0-9]+$/g;
+    let value = temp.test(str);
+    if(!!value){
+        return str
+    }else{
+        return ''
+    }
+};
+
+// 验证是否包含中英文以及标点符号\\w*|\\W*|[\\u4e00-\\u9fa5]
+export const ContentValid = (str) =>{
+    let temp = /^\w*|\W|[\u4E00-\u9FA5]/g;
+    let strRemove = spaceKeyValid(str);         // 检验是否为空
+    let value = temp.test(str);
+    if(!!strRemove){
+        return value
+    }else{
+        return ''
+    }
+};
+
+// 验证邮箱
+export const eMailValid = (str) =>{
+    let temp = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/g;
+    let value = temp.test(str);
+    if(!!value){
+        return str
+    }else{
+        return ''
+    }
+};
+
+
+// 验证手机号
+export const phoneValid = (str) =>{
+    let temp = /^1[3|4|5|6|7|8|9]\d{9}$/g;
+    let value = temp.test(str);
+    if(!!value){
+        return str
+    }else{
+        return ''
+    }
+};
+
 
 // 针对图形验证码，获取随机数
 export const randomCode = (n) => {
