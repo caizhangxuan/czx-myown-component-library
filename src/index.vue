@@ -1,14 +1,16 @@
 <template>
-    <section id="app">
+    <section id="app" style="position:absolute;width:100%;height:100%;">
+        <Login></Login>
     </section>
 </template>
 
 <script>
     import "../static/myIcon"
+    import Login from './components/Login'
 
     export default {
         name: 'app',
-        components: {},
+        components: {Login},
         data() {
             return {
 
