@@ -12,7 +12,7 @@
 </template>
 
 <script>
-  import {chartLine} from '../../utils'
+  import {chartLine} from '@/utils'
   export default {
     name: "LineChart",
     props:['title','lineID'],

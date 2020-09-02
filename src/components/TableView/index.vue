@@ -21,7 +21,7 @@
                     <el-form label-position="left">
                         <el-row>
                             <template v-for="(item,index) in tableHeader">
-                                <el-col :span="12">
+                                <el-col :span="12" :key="index">
                                     <el-form-item :label="item.name" :key="index" v-if="item.isWangEditor">
                                         <span v-html="props.row[item.value]"></span>
                                     </el-form-item>
@@ -182,7 +182,8 @@
             },
             // 行展开的时候，出发的事件
             changeExpand(row, expandedRows) {
-                // if(expandedRows.length > 0){
+              console.log(row,expandedRows);
+              // if(expandedRows.length > 0){
                 //     this.expandList.splice(0,1,row.id)
                 // }
                 // console.log(expandedRows);
@@ -191,7 +192,8 @@
             handleChoose(index, row, param) {
                 let para = Object.assign({}, row);
                 let paraId = {
-                    id: para.id
+                    id: para.id,
+                    index:index
                 };
                 switch (param.typeId) {
                     case 'check':
@@ -201,7 +203,7 @@
                         this.$emit('editOperation', para);
                         break;
                     case 'del':
-                        this.$emit('delOperation', index);
+                        this.$emit('delOperation', paraId);
                         break;
                     case 'qrCode':
                         this.$emit('codeOperation', para);

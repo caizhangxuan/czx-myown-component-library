@@ -10,7 +10,7 @@
 </template>
 
 <script>
-  import {chartBar} from '../../utils'
+  import {chartBar} from '@/utils'
   export default {
     name: "LineChart",
     props:{

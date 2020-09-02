@@ -15,7 +15,7 @@ export const spaceKeyValid = (str) =>{
     let value;
     if(str){
         value = str.replace(/^\s*/g,"");
-        if(!!value){
+        if(value){
             return value
         }else{
             return ''
@@ -26,7 +26,7 @@ export const spaceKeyValid = (str) =>{
 export const NUmValid = (str) =>{
     let temp = /^[0-9]*$/g;
     let value = temp.test(str);
-    if(!!value){
+    if(value){
         return str
     }else{
         return ''
@@ -36,7 +36,7 @@ export const NUmValid = (str) =>{
 export const FloatValid = (str) =>{
     let temp = /^([1-9][0-9]*)+(.[0-9]{1,2})?$/g;
     let value = temp.test(str);
-    if(!!value){
+    if(value){
         return str
     }else{
         return ''
@@ -46,7 +46,7 @@ export const FloatValid = (str) =>{
 export const IntegerValid = (str) =>{
     let temp = /^([1-9][0-9]*)$/g;
     let value = temp.test(str);
-    if(!!value){
+    if(value){
         return str
     }else{
         return ''
@@ -58,7 +58,7 @@ export const IntegerValid = (str) =>{
 export const EngNumValid = (str) =>{
     let temp = /^[A-Za-z0-9]+$/g;
     let value = temp.test(str);
-    if(!!value){
+    if(value){
         return str
     }else{
         return ''
@@ -69,7 +69,7 @@ export const EngNumValid = (str) =>{
 export const ChinEngValid = (str) =>{
     let temp = /^[\u4E00-\u9FA5A-Za-z0-9]+$/g;
     let value = temp.test(str);
-    if(!!value){
+    if(value){
         return str
     }else{
         return ''
@@ -81,7 +81,7 @@ export const ContentValid = (str) =>{
     let temp = /^\w*|\W|[\u4E00-\u9FA5]/g;
     let strRemove = spaceKeyValid(str);         // 检验是否为空
     let value = temp.test(str);
-    if(!!strRemove){
+    if(strRemove){
         return value
     }else{
         return ''
@@ -92,7 +92,7 @@ export const ContentValid = (str) =>{
 export const eMailValid = (str) =>{
     let temp = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/g;
     let value = temp.test(str);
-    if(!!value){
+    if(value){
         return str
     }else{
         return ''
@@ -102,9 +102,9 @@ export const eMailValid = (str) =>{
 
 // 验证手机号
 export const phoneValid = (str) =>{
-    let temp = /^1[3|4|5|6|7|8|9]\d{9}$/g;
+    let temp = /^1[3-9]\d{9}$/g;
     let value = temp.test(str);
-    if(!!value){
+    if(value){
         return str
     }else{
         return ''
@@ -114,6 +114,7 @@ export const phoneValid = (str) =>{
 
 // 针对图形验证码，获取随机数
 export const randomCode = (n) => {
+    // eslint-disable-next-line no-undef
     let codeList = _.sampleSize(code.code, n);
     return codeList.join('')
 };
@@ -279,6 +280,7 @@ export const formatterTime = (time,type) =>{
     hour = hour < 10 ? '0'+hour :hour;
     let m = date.getMinutes();        // 分
     m = m < 10 ? '0'+m :m;
+    // eslint-disable-next-line no-unused-vars
     let s = date.getSeconds();        // 秒
     s = s < 10 ? '0'+s :s;
 
@@ -294,6 +296,7 @@ export const formatterTime = (time,type) =>{
 };
 
 // 统计的柱状图
+// eslint-disable-next-line no-unused-vars
 export const chartBar = (para,theme,opts,title) => {
     let pieChart = echarts.init(para,theme,opts);
     let option = {
