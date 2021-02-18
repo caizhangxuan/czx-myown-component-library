@@ -1,0 +1,93 @@
+{
+  "list": [
+   {
+      "id": 16,
+      "name": "1",
+      "IP": "1.1.1.1",
+      "location": "2405:78C0::00/32",
+      "order": "网络室",
+      "version": "网络机构",
+      "update": "网络室",
+      "description": "首都发生的风景"
+    }
+  ],
+  "toolbar": [
+    { "code": "search",
+      "name": "查询" ,
+      "status": "primary",
+      "icon": "el-icon-search"
+    },
+    { "code": "reset",
+      "name": "重置",
+      "icon": "el-icon-refresh"
+    },
+    { "code": "add",
+      "name": "新增" ,
+      "status": "success",
+      "icon": "el-icon-plus"
+    }
+  ],
+  "header": [
+    {
+      "name": "序号",
+      "value": "id",
+      "width": "150"
+    },{
+      "name": "脚本任务模版名称",
+      "value": "name",
+      "width": "150"
+    },{
+      "name": "创建时间",
+      "value": "createTime",
+      "width": "150"
+    },{
+      "name": "创建人",
+      "value": "creator",
+      "width": "150"
+    },{
+      "name": "责任人",
+      "value": "director",
+      "width": "150"
+    },{
+      "name": "状态",
+      "value": "status",
+      "width": "150",
+      "type": "switch",
+      "onLabel": "上线",
+      "offLabel": "未上线",
+      "onValue": 1,
+      "offValue": 0
+    }
+  ],
+  "tableOperation": {
+    "title": "操作",
+    "width": 140,
+    "list": [
+    {
+        "title": "编辑",
+        "typeId": "edit",
+        "type": "text",
+        "icon": "el-icon-edit",
+        "buttonName": ""
+      },
+      {
+        "title": "删除",
+        "typeId": "del",
+        "type": "text",
+        "icon": "el-icon-delete",
+        "buttonName": ""
+      }
+    ]
+  },
+  "labelList": [
+    {
+      "label":"责任人",
+      "value":"director",
+      "placeholder":"请输入责任人"
+    },{
+      "label":"脚本名称",
+      "value":"name",
+      "placeholder":"请输入脚本名称"
+    }
+  ]
+}

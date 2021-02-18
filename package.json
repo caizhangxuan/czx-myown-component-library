@@ -8,13 +8,19 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "axios": "^0.19.2",
-    "core-js": "^3.4.3",
-    "echarts": "^4.5.0",
-    "element-ui": "^2.13.0",
-    "lodash": "^4.17.15",
+    "axios": "^0.21.1",
+    "core-js": "^3.8.3",
+    "echarts": "^5.0.2",
+    "element-ui": "^2.15.0",
+    "gojs": "^2.1.35",
+    "lodash": "^4.17.20",
     "mockjs": "^1.1.0",
-    "vue": "^2.6.10"
+    "vcrontab": "^0.3.5",
+    "vue": "^2.6.12",
+    "vxe-table": "^3.1.5",
+    "vxe-table-plugin-element": "^1.10.3",
+    "vxe-utils": "^2.0.1",
+    "xe-utils": "^3.1.8"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.1.0",
@@ -23,7 +29,7 @@
     "babel-eslint": "^10.0.3",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.12"
   },
   "eslintConfig": {
     "root": true,

@@ -1,0 +1,100 @@
+{
+  "list": [
+   {
+      "id": 16,
+      "name": "1",
+      "IP": "1.1.1.1",
+      "location": "2405:78C0::00/32",
+      "order": "网络室",
+      "version": "网络机构",
+      "update": "网络室",
+      "description": "首都发生的风景"
+    }
+  ],
+  "toolbar": [
+    { "code": "search",
+      "name": "查询" ,
+      "status": "primary",
+      "icon": "el-icon-search"
+    },
+    { "code": "reset",
+      "name": "重置",
+      "icon": "el-icon-refresh"
+    },
+    { "code": "add",
+      "name": "新增" ,
+      "status": "success",
+      "icon": "el-icon-plus"
+    },
+    { "code": "upload",
+      "name": "上传" ,
+      "status": "danger",
+      "icon": "el-icon-upload2"
+    }
+  ],
+  "header": [
+    {
+      "name": "模版名称",
+      "value": "name",
+      "width": "150"
+    },{
+      "name": "服务器地址",
+      "value": "IP",
+      "width": "150"
+    },{
+      "name": "文件位置",
+      "value": "location",
+      "width": "150"
+    },{
+      "name": "责任人",
+      "value": "order",
+      "width": "150"
+    },{
+      "name": "版本",
+      "value": "version",
+      "width": "150"
+    },{
+      "name": "备注",
+      "value": "description",
+      "width": "150"
+    },{
+      "name": "最后修改时间",
+      "value": "update",
+      "width": "150"
+    }
+  ],
+  "tableOperation": {
+    "title": "操作",
+    "width": 180,
+    "list": [
+      {
+        "title": "编辑",
+        "typeId": "edit",
+        "type": "text",
+        "icon": "el-icon-edit",
+        "buttonName": ""
+      },
+      {
+        "title": "同步",
+        "typeId": "synchronous",
+        "type": "text",
+        "icon": "el-icon-sort",
+        "buttonName": ""
+      },
+      {
+        "title": "删除",
+        "typeId": "del",
+        "type": "text",
+        "icon": "el-icon-delete",
+        "buttonName": ""
+      },
+      {
+        "title": "转让",
+        "typeId": "transfer",
+        "type": "text",
+        "icon": "el-icon-takeaway-box",
+        "buttonName": ""
+      }
+    ]
+  }
+}

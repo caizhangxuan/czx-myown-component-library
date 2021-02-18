@@ -1,16 +1,17 @@
 <template>
     <section id="app" style="position:absolute;width:100%;height:100%;">
-        <Login></Login>
+        <Cron></Cron>
     </section>
 </template>
 
 <script>
     import "../static/myIcon"
-    import Login from './components/Login'
+    // import Login from './components/Login'
+    import Cron from './components/Cron'
 
     export default {
         name: 'app',
-        components: {Login},
+        components: {Cron},
         data() {
             return {
 

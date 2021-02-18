@@ -1,0 +1,25 @@
+{
+  "list": [
+
+  ],
+  "toolbar": [
+    { "code": "save",
+      "name": "保存" ,
+      "status": "primary",
+      "icon": ""
+    }
+  ],
+  "header": [
+    {
+      "name": "取消",
+      "value": "",
+      "width": "60",
+      "type": "radio"
+    },
+    {
+      "name": "脚本名称",
+      "value": "scriptName",
+      "width": "150"
+    }
+  ]
+}
